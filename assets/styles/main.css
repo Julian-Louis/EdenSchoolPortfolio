@@ -1,0 +1,424 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("../fonts/Poppins-Light.ttf");
+}
+
+:root {
+    --primary: #7dbcbb;
+    --gray: #828996;
+    --darkgray: #303033;
+    --lightgray: #F7F7F7;
+}
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins-Regular', sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url("../images/bandeau.jpg") no-repeat;
+    background-size: cover;
+    color: white;
+    height: 600px;
+    text-align: center;
+}
+
+.header-logo {
+    height: 58px;
+    margin-top: 48px;
+}
+
+.header-title {
+    margin-top: 112px;
+    font-weight: 400;
+    font-size: 96px;
+}
+
+.header-description {
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.nav-content {
+
+    list-style: none;
+}
+
+.nav-content > a {
+    color: var(--darkgray);
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-content > a.active {
+    color: var(--primary);
+}
+
+#presentation, .qualities-list, #projects, #parcours, #interets, #why {
+    padding: 0 20%;
+}
+
+#presentation {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.presentation-left, .presentation-right, .interets-left, .interets-right, .why-left, .why-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: var(--darkgray);
+}
+
+
+.presentation-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation-name {
+    text-transform: uppercase;
+    line-height: 40px;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.presentation-photo {
+
+    justify-content: center;
+    width: 175px;
+    height: 250px;
+}
+
+.presentation-description {
+    margin-top: 16px;
+}
+
+.citation {
+    margin-top: 64px;
+    padding: 72px 0;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+.qualities-list {
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+
+}
+
+.qualities {
+    text-align: center;
+    font-size: 26px;
+    padding: 64px 0;
+}
+
+
+.qualities-number {
+    font-size: 38px;
+    color: var(--primary)
+}
+
+.qualities-text {
+    color: var(--darkgray);
+}
+
+#projects {
+    color: var(--darkgray);
+}
+
+
+.projects-head, .parcours-head {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.projects-items {
+
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+    margin: 8px;
+
+    padding: 64px 0;
+    background-size: cover;
+    text-align: center;
+
+
+}
+
+
+
+.projects-items-1{
+    background: url("../images/gmodhub.png") no-repeat center;
+    background-size: cover;
+}
+
+.projects-items-2{
+    background: url("../images/csgo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.projects-items-3{
+    background: url("../images/twitch.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.projects-items-4{
+    background: url("../images/teamspeak.png") no-repeat center;
+    background-size: cover;
+}
+
+
+
+.projects-items::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects-items:hover::before {
+    background: var(--primary);
+}
+
+
+.projects-title, .projects-text {
+    position: relative;
+    color: transparent;
+    transition: 1s;
+
+}
+
+
+
+.projects-items:hover .projects-title, .projects-items:hover .projects-text {
+    color: white;
+
+}
+
+.projects-mid {
+    width: 100%;
+}
+
+
+.parcours-head {
+    margin-top: 82px;
+}
+
+
+.parcours-year {
+    margin: 48px 0;
+}
+
+.parcours-title {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.parcours-type {
+    color: var(--darkgray);
+    font-weight: 400;
+}
+
+.parcours-desc {
+    color: var(--gray);
+}
+
+#interets {
+    background: var(--lightgray);
+    padding-bottom: 64px;
+
+}
+
+.interets-title {
+    text-align: center;
+    padding: 32px 0;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--darkgray)
+}
+
+.interets-desc {
+    color: #4B4B4E;
+    font-size: 14px;
+    padding: 48px 48px 48px 0;
+}
+
+.interets-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width: 750px){
+    .interets-content{
+        flex-direction: column;
+    }
+
+    #presentation{
+        flex-direction: column;
+    }
+
+    .qualities{
+        font-size: 12px;
+    }
+
+}
+
+.interets-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.interets-items {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    margin: 8px;
+    padding: 64px 0;
+    text-align: center;
+    /*transition: all 0.2s ease-in-out;*/
+
+}
+
+.interets-items-1 {
+    background: url("../images/computer.jpg") no-repeat center;
+    background-size: cover;
+
+}
+
+.interets-items-2 {
+
+    background: url("../images/bicycle.jpg") no-repeat center;
+    background-size: cover;
+
+
+}
+
+.interets-items-3 {
+
+    background: url("../images/concert.jpg") no-repeat;
+    background-size: cover;
+
+
+}
+
+.interets-items-4 {
+    background: url("../images/discord.png") no-repeat center;
+    background-size: cover;
+
+
+}
+
+.interets-right {
+    justify-content: center;
+
+}
+
+
+.text-primary {
+    color: var(--primary);
+}
+
+#why {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+
+.why-left {
+
+
+}
+
+.why-text {
+
+
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--darkgray)
+}
+
+.why-desc {
+    color: var(--gray);
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: var(--darkgray);
+    color: white;
+    padding: 32px 0;
+    font-size: 13px;
+}
+
+.footer-baseline {
+    margin: auto 64px;
+}
+
+.footer-logo {
+    height: 42px;
+}
+
+
+
+
+@media screen and (max-width: 620px){
+    .nav-list{
+        flex-direction: column;
+        text-align: center;
+    }
+}
